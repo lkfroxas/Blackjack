@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.Stack;
 
 /**
  * Represents a deck of playing cards. The deck, represented by
@@ -10,11 +11,11 @@ import java.util.concurrent.ThreadLocalRandom;
  * return the first item in the list. If the deck is empty when an
  * attempt to draw is made, a new deck is made and shuffled.
  * 
- * @author Lowell Roxas, others
+ * @author Robby Hart, Robert King, Lowell Roxas, Christopher Ruiter
  *
  */
 public class Deck {
-	private ArrayList<Card> deck;
+	private Stack<Card> deck;
 	
 	/**
 	 * Initializes and shuffles the deck. See {@link #shuffle()
@@ -37,11 +38,11 @@ public class Deck {
 			straightDeck.add(new Card(i));
 		}
 		
-		deck = new ArrayList<Card>(52);
+		deck = new Stack<Card>();
 		int index = 0;
 		while (!straightDeck.isEmpty()) {
 			index = ThreadLocalRandom.current().nextInt(0, straightDeck.size());
-			deck.add(straightDeck.remove(index));
+			deck.push(straightDeck.remove(index));
 		}
 	}
 	
@@ -54,6 +55,6 @@ public class Deck {
 	 */
 	public Card dealCard() {
 		if (deck.isEmpty()) shuffle();
-		return deck.remove(0);
+		return deck.pop();
 	}
 }

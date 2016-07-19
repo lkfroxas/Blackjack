@@ -5,7 +5,7 @@ package model;
  * class extends {@link #Dealer <code>Dealer</code>}, adding data
  * and methods for a player's number of wins, ties, and losses.
  * 
- * @author Lowell Roxas
+ * @author Robby Hart, Robert King, Lowell Roxas, Christopher Ruiter
  *
  */
 public class Player extends Dealer {

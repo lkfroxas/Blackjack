@@ -7,7 +7,7 @@ package model;
  * different card (see {@link #Card() <code>Card()</code} for
  * details.
  * 
- * @author Lowell Roxas
+ * @author Robby Hart, Robert King, Lowell Roxas, Christopher Ruiter
  */
 public class Card {
 	private int cardNumber; // from 0 to 52

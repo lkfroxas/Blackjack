@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * the value of the hand. The Player class is a
  * child class of Dealer.
  * 
- * @author Lowell Roxas, others
+ * @author Robby Hart, Robert King, Lowell Roxas, Christopher Ruiter
  *
  */
 public class Dealer {
